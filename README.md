@@ -1,2 +1,2 @@
 # ShaderRendererJS
-A Render for Shader written in JS
+A Render for Shaders written in JS
