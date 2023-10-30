@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <h1>Shaders</h1>
+    <p></p>
+    <div class="container" id="container">
+      <label for="shaderSelector">Choose a Shader:</label>
+      <select id="shaderSelector" name="shaderSelector">
+        <option value="none" selected>None</option>
+        <option value="ShaderArt">ShaderArt</option>
+        <option value="PrettyHip">PrettyHip</option>
+        <option value="Beam">Beam</option>
+        <option value="Wave">Wave</option>
+        <option value="Voronoise">Voronoise</option>
+        <option value="Workshop">Workshop</option>
+        <option value="Rainbow_Showoff">Rainbow Showoff</option>
+        <option value="Quicky">Quicky</option>
+        <option value="PsychedelicSakura">PsychedelicSakura</option>
+      </select>
+      <button type="button" id="draw">Draw</button>
+      <button type="button" id="animate">Run</button>
+      <br></br>
+      <label>
+        <span>PixelSize:</span>
+        <select id="pixelSize" name="pixelSize">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4" selected>4</option>
+          <option value="5" >5</option>
+        </select>
+      </label>
+      <label>
+        <span>Speed:</span>
+        <input
+          type="range"
+          name="speed"
+          min="0"
+          max="4000"
+          step="50"
+          value="1000"
+          id="speedSelector"
+          style="width: 200px"
+        />
+      </label>
+      <label>
+        <span>Fps:</span>
+        <input
+          type="range"
+          name="fps"
+          min="0"
+          max="100"
+          step="10"
+          value="60"
+          id="fpsSelector"
+          style="width: 200px"
+        />
+      </label>
+      <pre id="time"></pre>
+      <canvas id="canvas" class="canvas" width="800" height="800"></canvas>
+    </div>
+    <script src="../utils.js"></script>
+    <script src="../math/MathUtils.js"></script>
+    <script src="./ShaderRender.js" type="module"></script>
+    <script src="./example.js" type="module"></script>
+  </body>
+</html>
